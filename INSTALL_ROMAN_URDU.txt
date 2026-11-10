@@ -1,0 +1,33 @@
+HAIDER STORE - API FILES (PHASE 1)
+
+YEH FILES KYA KARTI HAIN?
+- api/health.php: API aur database connection test
+- api/themes.php: Admin ki selected website theme read karta hai
+- api/categories.php: Categories read karta hai
+- api/products.php: Products, search, category filter aur pagination read karta hai
+- api/banners.php: Active app banners read karta hai
+
+INSTALL KARNE KA TAREEQA
+1. Apne computer par is ZIP ko extract karein.
+2. Extract hone ke baad 'api' naam ka folder milega.
+3. InfinityFree File Manager ya FTP mein apni website ke htdocs folder ko kholein.
+4. htdocs ke andar 'api' naam ka naya folder banayein.
+5. Is package ke api folder ke andar ki tamam PHP files us naye htdocs/api folder mein upload karein.
+6. Website ki kisi existing file ko replace na karein.
+7. Browser mein yeh URL kholein: https://haiderstore.shop/api/health.php
+8. Agar success true aur database connected aaye to screenshot bhejein. Agar error aaye to screenshot bhejein; error mein password ya hosting credentials share na karein.
+
+TEST URLS
+https://haiderstore.shop/api/health.php
+https://haiderstore.shop/api/themes.php
+https://haiderstore.shop/api/categories.php
+https://haiderstore.shop/api/products.php
+https://haiderstore.shop/api/products.php?page=1&per_page=10
+https://haiderstore.shop/api/products.php?search=RoyalX
+https://haiderstore.shop/api/banners.php
+
+AHAM SECURITY NOTE
+Aapki pehle share ki hui website ZIP mein db_connect.php ke andar database password plain text mein maujood tha. Hosting panel se database password rotate/change karein aur apne server ke db_connect.php mein naya password update karein. Naya password mujhe chat mein mat bhejein. API files existing db_connect.php ko use karti hain; is package mein koi database password shamil nahi.
+
+LIMITATIONS - PHASE 1
+Yeh sirf public read-only API endpoints hain. Login/register, customer account, cart, checkout, order history aur secure admin theme update abhi shamil nahi. Un ke liye alag authentication aur order API design/test karenge. Multi-item orders ke liye current database mein order_items table nahi hai; schema change aapki approval ke baghair nahi hoga.
